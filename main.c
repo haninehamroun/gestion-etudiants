@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include <locale.h>
 
 struct etudiant
 {
@@ -360,6 +361,7 @@ void liberer_liste(struct cellule_etudiant* liste) {
 
 
 int main() {
+    setlocale(LC_ALL, "");
     int choix, n;
     struct etudiant* tab = NULL;
     struct cellule_etudiant* liste = NULL;
